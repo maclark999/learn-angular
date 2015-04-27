@@ -23,5 +23,10 @@
   MainController.$inject = ['$scope'];
   function MainController($scope) {
     $scope.corndog = 'Batter-fried meat tube!';
+    $scope.burrito = burrito;
+
+    function burrito() {
+      return 'Burrito with bean and cheese deliciousness!'
+    };
   }
 })();
