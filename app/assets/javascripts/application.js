@@ -20,18 +20,18 @@
     .controller('MainController', MainController)
     ;
 
-  MainController.$inject = ['$scope'];
-  function MainController($scope) {
-    $scope.addFood = addFood;
-    $scope.foods = [
+  function MainController() {
+    var vm = this;
+    vm.addFood = addFood;
+    vm.foods = [
       'Batter-fried meat tube!',
       'Burrito with bean and cheese deliciousness!',
       'Pasgetti with beetmalls and marmpasean!'
     ];
 
     function addFood() {
-      $scope.foods.push($scope.newFood);
-      $scope.newFood = '';
+      vm.foods.push(vm.newFood);
+      vm.newFood = '';
     }
   }
 })();
