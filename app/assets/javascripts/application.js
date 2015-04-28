@@ -22,10 +22,16 @@
 
   MainController.$inject = ['$scope'];
   function MainController($scope) {
+    $scope.addFood = addFood;
     $scope.foods = [
       'Batter-fried meat tube!',
       'Burrito with bean and cheese deliciousness!',
       'Pasgetti with beetmalls and marmpasean!'
     ];
+
+    function addFood() {
+      $scope.foods.push($scope.newFood);
+      $scope.newFood = '';
+    }
   }
 })();

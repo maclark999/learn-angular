@@ -2,3 +2,10 @@
 <p ng-repeat="food in foods">
   {{food}}
 </p>
+<form ng-submit="addFood()">
+  <fieldset>
+    <label for="stuff">Enter a new food item:</label><br>
+    <input id="stuff" ng-model="newFood"><br>
+    <input type="submit" value="Cook it up!"><br>
+  </fieldset>
+</form>
